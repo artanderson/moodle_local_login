@@ -43,6 +43,13 @@ if($hassiteconfig) {
             '',
 			PARAM_TEXT,
 		));
+        $settingspage->add(new admin_setting_configtextarea(
+            'local_login/excludedtenants',
+            new lang_string('excludedtenants', 'local_login'),
+            new lang_string('excludedtenants_desc', 'local_login'),
+            '',
+            PARAM_TEXT
+        ));
     }
 
     $ADMIN->add('localplugins', $settingspage);
